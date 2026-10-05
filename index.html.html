@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Офіс Президента України — Офіційне інтернет-представництво (RP Project)</title>
+    <style>
+        :root {
+            --gov-blue: #0b2b4c;
+            --gov-accent: #0056b3;
+            --gov-light: #f4f7f9;
+            --text-color: #333333;
+            --border-color: #d1d8e0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--gov-light);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Верхня державна стрічка */
+        .top-bar {
+            background-color: #000;
+            color: #fff;
+            font-size: 13px;
+            padding: 6px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-bar span {
+            color: #ffcc00;
+            font-weight: bold;
+        }
+
+        /* Шапка сайту */
+        header {
+            background-color: #fff;
+            border-bottom: 3px solid var(--gov-blue);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .emblem {
+            font-size: 36px;
+        }
+
+        .logo-text h1 {
+            font-size: 20px;
+            color: var(--gov-blue);
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .logo-text p {
+            font-size: 13px;
+            color: #666;
+        }
+
+        /* Навігація */
+        nav {
+            background-color: var(--gov-blue);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-container li a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            display: block;
+            font-size: 15px;
+            transition: background 0.2s;
+        }
+
+        .nav-container li a:hover {
+            background-color: var(--gov-accent);
+        }
+
+        /* Головний контент */
+        main {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+            .nav-container {
+                flex-direction: column;
+            }
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+        }
+
+        .card h2 {
+            font-size: 22px;
+            color: var(--gov-blue);
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--gov-light);
+            padding-bottom: 10px;
+        }
+
+        .news-item {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .news-date {
+            font-size: 12px;
+            color: #888;
+            margin-bottom: 5px;
+        }
+
+        .news-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: var(--gov-accent);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .news-title:hover {
+            text-decoration: underline;
+        }
+
+        /* Бічна панель */
+        .sidebar-widget {
+            background: var(--gov-blue);
+            color: white;
+            padding: 20px;
+            border-radius: 6px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .sidebar-widget h3 {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .sidebar-widget p {
+            font-size: 14px;
+            margin-bottom: 15px;
+            color: #d1d8e0;
+        }
+
+        .btn {
+            background-color: #ffcc00;
+            color: #000;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            transition: background 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #e6b800;
+        }
+
+        /* Футер */
+        footer {
+            background-color: #1a1a1a;
+            color: #aaa;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Верхня панель -->
+    <div class="top-bar">
+        <div>Офіційний вебсайт державного проекту <span>ROBLOX RP</span></div>
+        <div>Українська</div>
+    </div>
+
+    <!-- Шапка -->
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="emblem">🇺🇦</div>
+                <div class="logo-text">
+                    <h1>Офіс Президента України</h1>
+                    <p>Державна інтернет-платформа</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Меню -->
+    <nav>
+        <ul class="nav-container">
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="#news">Новини</a></li>
+            <li><a href="#decrees">Укази Президента</a></li>
+            <li><a href="#petitions">Електронні петиції</a></li>
+            <li><a href="#contacts">Звернення громадян</a></li>
+        </ul>
+    </nav>
+
+    <!-- Основна частина -->
+    <main>
+        <!-- Ліва колонка: Новини та Укази -->
+        <div>
+            <div class="card">
+                <h2>Останні новини</h2>
+                
+                <div class="news-item">
+                    <div class="news-date">04 жовтня 2026</div>
+                    <a href="#" class="news-title">Президент підписав новий пакет законів щодо безпеки та правопорядку</a>
+                    <p style="font-size: 14px; color: #555;">Глава держави провів нараду з керівниками силових відомств та затвердив стратегію стабілізації криміногенної ситуації...</p>
+                </div>
+
+                <div class="news-item">
+                    <div class="news-date">02 жовтня 2026</div>
+                    <a href="#" class="news-title">Звіт засідання Ради національної безпеки і оборони</a>
+                    <p style="font-size: 14px; color: #555;">Розглянуто ключові питання бюджетного фінансування державних структур та взаємодії із закладами правопорядку...</p>
+                </div>
+            </div>
+
+            <div class="card" id="decrees">
+                <h2>Останні укази</h2>
+                <div class="news-item">
+                    <div class="news-date">Указ №142/2026</div>
+                    <a href="#" class="news-title">Про призначення керівника Головного управління Національної поліції</a>
+                </div>
+                <div class="news-item">
+                    <div class="news-date">Указ №141/2026</div>
+                    <a href="#" class="news-title">Про введення в дію рішення Ради національної безпеки</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Права колонка: Віджети -->
+        <div>
+            <div class="sidebar-widget">
+                <h3>Електронні петиції</h3>
+                <p>Маєте ідею для покращення законів чи роботи урядових структур? Створіть петицію або підтримайте існуючі.</p>
+                <a href="#" class="btn">Перейти до петицій</a>
+            </div>
+
+            <div class="card">
+                <h3 style="font-size: 16px; color: var(--gov-blue); margin-bottom: 10px;">Оперативна інформація</h3>
+                <p style="font-size: 13px; color: #666;">Усі сервіси урядового порталу в грі працюють у штатному режимі. База даних ЄРДР та реєстри інтегровані.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Підвал -->
+    <footer>
+        <p>&copy; 2026 Офіс Президента України (Roblox Roleplay Project). Усі права захищені у межах ігрового всесвіту.</p>
+    </footer>
+
+</body>
+</html>
